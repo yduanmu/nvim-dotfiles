@@ -6,4 +6,6 @@ vim.opt.shiftwidth = 4
 vim.opt.swapfile = false
 vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 -- vim.opt.winb:order = "rounded"
