@@ -14,6 +14,8 @@ vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
 
 -- MINI
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
+vim.keymap.set("n", "<leader>e", require("mini.files").open, { desc = "Open Mini Files" })
+vim.keymap.set("n", "<Esc>", require("mini.files").close, { desc = "Close Mini Files" })
 
 -- TERMINAL MODE
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], {noremap = true, silent = true})
