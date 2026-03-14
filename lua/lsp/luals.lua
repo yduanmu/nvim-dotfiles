@@ -8,6 +8,7 @@ vim.lsp.config['lua_ls'] = {
 				version = 'LuaJIT',
 			}
 		}
-	}
+	},
+	autostart = false,
 }
 vim.lsp.enable("lua_ls")
