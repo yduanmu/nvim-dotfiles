@@ -9,7 +9,7 @@ return {
 					enable = true,
 					additional_vim_regex_highlighting = false,
 				},
-				ensure_installed = {"cpp", "lua"},
+				ensure_installed = {"cpp", "lua", "latex"},
 				indent = {
 					enable = true,
 				},
