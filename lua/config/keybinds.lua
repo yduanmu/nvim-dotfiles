@@ -1,19 +1,52 @@
-vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>w", ":write<CR>")
-vim.keymap.set("n", "<leader>q", ":quit<CR>")
-vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear highlight' })
-vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'K', vim.lsp.buf.hover)
-vim.keymap.set('n', 'gr', vim.lsp.buf.references)
-vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
+local opt = {
+	noremap = true,
+	silent = true,
+}
 
--- MINI
-vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
+local map = vim.keymap.set
 
--- TERMINAL MODE
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], {noremap = true, silent = true})
+-- show files
+map("n", "<leader>cd", vim.cmd.Ex)
+
+-- write/quit
+map("n", "<leader>w", ":write<CR>")
+map("n", "<leader>q", ":quit<CR>")
+
+-- jump windows using CTRL hjkl
+map("n", "<C-h>", "<C-w>h", opt)
+map("n", "<C-j>", "<C-w>j", opt)
+map("n", "<C-k>", "<C-w>k", opt)
+map("n", "<C-l>", "<C-w>l", opt)
+
+-- clear highlights
+map('n', '<Esc>', '<cmd>noh<CR>', { desc = 'Clear highlight' })
+map('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear highlight' })
+
+-- undo/redo
+map('n', '<leader>re', '<cmd>redo<CR>', { desc = 'Redo' })
+map('n', '<leader>u', '<cmd>undo<CR>', { desc = 'Undo' })
+
+-- shift left/right to jump between words
+map("n", "<S-Left", "b", opt)
+map("n", "<S-Right>", "w", opt)
+
+-- jump to beginning or end of line
+map("n", "H", "_", opt, { desc = "Jump to first non-blank char" })
+map("n", "L", "$", opt)
+
+-- v mode: indent code
+map("v", ">", ">gv", opt)
+map("v", "<", "<gv", opt)
+
+-- LSP
+map("n", "<leader>lf", vim.lsp.buf.format)
+map('n', 'gd', vim.lsp.buf.definition)
+map('n', 'K', vim.lsp.buf.hover)
+map('n', 'gr', vim.lsp.buf.references)
+map('n', '<leader>rn', vim.lsp.buf.rename)
+
+-- open mini picker for files
+map("n", "<leader>f", ":Pick files<CR>")
+
+-- escape terminal mode
+map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
