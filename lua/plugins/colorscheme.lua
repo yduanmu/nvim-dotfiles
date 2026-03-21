@@ -1,12 +1,12 @@
 return {
 	{
     	"NLKNguyen/papercolor-theme",
-    	-- lazy = false,
-    	-- priority = 1000,
+		"sainnhe/edge",
+    	lazy = false,
+    	priority = 1000,
     	config = function()
       		vim.opt.background = "light"
-      		vim.cmd.colorscheme("papercolor")
-			-- for some reason the above doesn't work. Have to use an autocmd in init.lua
+      		-- vim.cmd.colorscheme("papercolor")
     	end,
 	},
 	{
@@ -15,7 +15,8 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		opts = {
-			theme = "papercolor_light",
+			theme = "edge"
+			-- theme = "papercolor_light",
 		}	
 	},
 }

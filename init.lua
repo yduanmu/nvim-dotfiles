@@ -9,6 +9,6 @@ require('plugins.treesitter')
 
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
-		vim.cmd([[colorscheme PaperColor]])
+		vim.cmd([[colorscheme edge]])
 	end,
 })
