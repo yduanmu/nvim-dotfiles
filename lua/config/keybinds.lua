@@ -39,6 +39,7 @@ map("v", ">", ">gv", opt)
 map("v", "<", "<gv", opt)
 
 -- LSP
+map("n", "<leader>d", vim.diagnostic.open_float)
 map("n", "<leader>lf", vim.lsp.buf.format)
 map('n', 'gd', vim.lsp.buf.definition)
 map('n', 'K', vim.lsp.buf.hover)
