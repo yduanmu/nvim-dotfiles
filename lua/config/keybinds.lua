@@ -46,7 +46,8 @@ map('n', 'gr', vim.lsp.buf.references)
 map('n', '<leader>rn', vim.lsp.buf.rename)
 
 -- open mini picker for files
-map("n", "<leader>f", ":Pick files<CR>")
+map("n", "<leader>pf", ":Pick files<CR>")
+map("n", "<leader>ps", ":Pick grep_live")
 
 -- escape terminal mode
 map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
