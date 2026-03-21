@@ -10,7 +10,9 @@ return {
 			require("mini.icons").setup() -- mini-completion dependency
 			require("mini.snippets").setup() -- mini-completion dependency
 			require("mini.completion").setup()
-			require("mini.surround").setup()
+			require("mini.surround").setup({
+				fallback_action = "<CR>"
+			})
 			-- require("mini.hues").setup()
 			
 			vim.keymap.set("n", "<leader>e", require("mini.files").open, { desc = "Open Mini Files" })
