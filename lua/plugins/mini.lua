@@ -13,6 +13,8 @@ return {
 			require("mini.surround").setup({
 				fallback_action = "<CR>"
 			})
+			require("mini.sessions").setup()
+			require("mini.starter").setup()
 			-- require("mini.hues").setup()
 			
 			vim.keymap.set("n", "<leader>e", require("mini.files").open, { desc = "Open Mini Files" })

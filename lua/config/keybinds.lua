@@ -50,5 +50,11 @@ map('n', '<leader>rn', vim.lsp.buf.rename)
 map("n", "<leader>pf", ":Pick files<CR>")
 map("n", "<leader>ps", ":Pick grep_live")
 
+-- mini sessions
+map("n", "<leader>mw", ":lua MiniSessions.write()")
+
+-- mini files
+-- see mini.lua
+
 -- escape terminal mode
 map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
