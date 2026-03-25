@@ -8,9 +8,9 @@ return {
 				highlight = {
 					enable = true,
 					additional_vim_regex_highlighting = false,
-					disable = {"latex"}, -- to not conflict with vimtex
+					-- disable = {"latex"}, -- to not conflict with vimtex
 				},
-				ensure_installed = {"cpp", "lua"},
+				ensure_installed = {"cpp", "python", "lua"},
 				indent = {
 					enable = true,
 				},
