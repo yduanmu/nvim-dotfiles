@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		local function compile_tex()
 			vim.cmd("write")
 			vim.fn.jobstart(
-				{ "latexmk", "-pdf", "-interaction=nonstopmode", "-synctex=1", vim.fn.expand("%") },
+				{ "latexmk", "-pdf", "-interaction=nonstopmode", "-synctex=1", "-outdir=build", vim.fn.expand("%") },
 				{
 					on_exit = function(_, code)
 						if code == 0 then
@@ -23,7 +23,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 
 		local function open_pdf()
-			local pdf = vim.fn.expand("%:r") .. ".pdf"
+			local pdf = "build/" .. vim.fn.expand("%:r") .. ".pdf"
 			vim.fn.jobstart({ "open", "-a", "Skim", pdf }, { detach = true })
 		end
 

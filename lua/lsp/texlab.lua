@@ -4,7 +4,7 @@ vim.lsp.config('texlab', {
 		texlab = {
 			build = {
 				executable = "latexmk",
-				args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+				args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-outdir=build", "%f" },
 				onSave = false,
 			},
 			forwardSearch = {
