@@ -27,6 +27,14 @@
     "papercolor-theme": {
       "rev": "0cfe64ffb24c21a6101b5f994ca342a74c977aef",
       "src": "https://github.com/NLKNguyen/papercolor-theme"
+    },
+    "texlab": {
+      "rev": "4cc18b37c0b46baf39189f173d1bd7468d3f56e1",
+      "src": "https://github.com/latex-lsp/texlab"
+    },
+    "vimtex": {
+      "rev": "b652447a39eeb180ea103d6b39efe84e7cf74117",
+      "src": "https://github.com/lervag/vimtex"
     }
   }
 }

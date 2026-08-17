@@ -58,3 +58,6 @@ map("n", "<leader>mw", ":lua MiniSessions.write()")
 
 -- escape terminal mode
 map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
+
+-- latex
+-- see autocmds.lua
