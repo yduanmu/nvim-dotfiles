@@ -1,20 +1,6 @@
-return {
-	{
-		'nvim-treesitter/nvim-treesitter',
-		lazy = false,
-		build = ':TSUpdate',
-		config = function()
-			require('nvim-treesitter.config').setup({
-				highlight = {
-					enable = true,
-					additional_vim_regex_highlighting = false,
-					-- disable = {"latex"}, -- to not conflict with vimtex
-				},
-				ensure_installed = {"cpp", "python", "lua"},
-				indent = {
-					enable = true,
-				},
-			})
-		end,
-	},
-}
+require('nvim-treesitter').install({ "cpp", "python", "lua" })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "cpp", "python", "lua" },
+	callback = function() vim.treesitter.start() end,
+})
