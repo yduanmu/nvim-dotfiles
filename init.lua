@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.clipboard = 'osc52'
 
 require('config.options')
 require('config.keybinds')
