@@ -7,7 +7,7 @@ require('plugins')
 require('lsp.clangd')
 require('lsp.luals')
 require('lsp.pyright')
-require('lsp.texlab')
+-- require('lsp.texlab')
 
 vim.g.vimtex_view_method = 'skim'
 vim.g.vimtex_view_skim_sync = 1
