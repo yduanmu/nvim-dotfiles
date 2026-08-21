@@ -19,8 +19,8 @@ map("n", "<C-k>", "<C-w>k", opt)
 map("n", "<C-l>", "<C-w>l", opt)
 
 -- clear highlights
-map('n', '<Esc>', '<cmd>noh<CR>', { desc = 'Clear highlight' })
-map('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear highlight' })
+map('n', '<leader>n', '<cmd>noh<CR>', { desc = 'Clear highlight' })
+map('n', '<leader>n', '<cmd>nohlsearch<CR>', { desc = 'Clear highlight' })
 
 -- undo/redo
 map('n', '<leader>re', '<cmd>redo<CR>', { desc = 'Redo' })
