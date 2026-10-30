@@ -11,3 +11,9 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.winborder = "rounded"
+
+vim.filetype.add({
+	extension = {
+		h = "c",
+	},
+})
